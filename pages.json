@@ -7,17 +7,18 @@
 	},{
 		"path": "pages/index/index",
 		"style": {
-			"navigationBarTitleText": "uni-ui基础项目"
+			
 		}
 	},{
 		"path":"pages/Discover/Discover",
 		"style":{
-			"navigationBarTitleText":"发现页"
+			
 		}
-	},{
+	},
+	{
             "path" : "pages/Wish/Wish",
             "style" : {
-				"navigationBarTitleText":"心愿页"
+				
 			}
     },{
             "path" : "pages/Takeout/Takeout",
@@ -53,6 +54,10 @@
 			"iconPath":"static/discover1.png",
 			"selectedIconPath":"static/discover2.png"
 		},{
+			"pagePath":"pages/Toolbar/toolbar",
+			"iconPath":"./static/add.png"
+		},
+		{
 			"pagePath":"pages/Wish/Wish",
 			"text":"Wish",
 			"iconPath":"static/Wish1.png",

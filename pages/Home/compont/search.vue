@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		<!-- 这个子组件主要负责写header+导航+轮播图 -->
+		<!-- 这个子组件主要负责写header+导航-->
 		<!-- 上面的状态栏 -->
 		<view class="uni-status-bar"></view>
 		<!-- 头部包括 菜单购物车 -->
@@ -29,28 +29,26 @@
 			
 		</view>
 		<!-- 导航栏 -->
-		<navigator class="Navigate-bar" url="./Nav/cate" open-type="navigate" hover-class="navigator-hover">
-			<!-- <button>跳转</button> -->
-			<text class="hot">Hot</text>
-			<text class="cate">Cate</text>
-		</navigator>
-		<view class="Swiper">
-			<swiper class="swiper"indicator-dots="true" indicator-color="rgba(218, 211, 211)" >
-			    <swiper-item>
-					<image src="../../../static/轮播图1.png" mode="widthFix"></image>
-			    </swiper-item>
-			    <swiper-item>
-			        <image src="../../../static/轮播图2.png" mode="widthFix"></image>
-			    </swiper-item>
-			</swiper>
-		</view>
-		<view class="Product-item"></view>
+		
 		
 		
 	</view>
 </template>
 
 <script>
+	export default{
+		
+		data(){
+			return{
+				
+			}
+		},
+		methods:{
+			clickTab(){
+				
+			}
+		}
+	}
 </script>
 
 <style scoped>
@@ -121,11 +119,11 @@
 		font-size: 50rpx;
 	}
 	/* 导航栏 */
-	.Navigate-bar{
+	/* .Navigate-bar{
 		width: 100%;
 		height: 27px;
 		
-		/* background-color: #008000; */
+		
 		display: flex;
 		border-bottom: 0.5px solid #E3E3E3;
 	}
@@ -143,7 +141,7 @@
 		font-weight: bold;
 		font-size: 14px;
 		line-height: 16px;
-		/* identical to box height */
+		
 		
 		display: flex;
 		align-items: center;
@@ -163,7 +161,7 @@
 		font-weight: bold;
 		font-size: 14px;
 		line-height: 16px;
-		/* identical to box height */
+	
 		
 		display: flex;
 		align-items: center;
@@ -171,13 +169,29 @@
 		letter-spacing: -0.015em;
 		
 		color: #4F4E4E;
+	} */
+	/* .tabs{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 27px;
+		border-bottom: 0.5px solid #E3E3E3;;
+		font-family: Comfortaa;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+		
 	}
+	.tabs-item{
+		margin-right: 18px;
+	} */
 	/* 轮播图 */
-	.swiper{
+	/* .swiper{
 		margin: 16px auto;
 	}
 	.swiper image{
 		width: 100%;
 		
-	}
+	} */
 </style>

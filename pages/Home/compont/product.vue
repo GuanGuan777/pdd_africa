@@ -1,10 +1,20 @@
 <template>
 	<view>
 		<!-- 这个组件主要负责商品列表-->
+			<view class="Swiper">
+				<swiper class="swiper"indicator-dots="true" indicator-color="rgba(218, 211, 211)" >
+					<swiper-item>
+						<image src="../../../static/轮播图1.png" mode="widthFix"></image>
+					</swiper-item>
+					<swiper-item>
+						<image src="../../../static/轮播图2.png" mode="widthFix"></image>
+					</swiper-item>
+				</swiper>
+			</view>
 		
-			<view class="product-list">
-			
-				<view class="product" v-for="item in productList" :key="item.id" @click="goPath">
+			<view class="product-table">
+		
+				<view class="product" v-for="item in productlist" :key="item.id" @click="goPath">
 					<view class="product-image">
 						<image :src="item.img" mode="widthFix"></image>
 					</view>
@@ -31,9 +41,19 @@
 <script>
 	import axios from 'axios'
 	export default{
+		props:[
+			"productlist"
+			
+			],
+		props:{
+			"productlist":Array,
+		
+			
+		},
 		data (){
 			return {
-				productList:[]
+				// productList:[]
+				
 			}
 		},
 		mounted() {
@@ -41,10 +61,13 @@
 		},
 		methods:{
 			getData(){
-				axios.get('/product_list').then((res)=>{
-					console.log(res);
-					this.productList=res.data
-				})
+				// axios.get('/product_list').then((res)=>{
+				// 	console.log(res);
+				// 	this.productList.map((val,index)=>{	
+				// 	this.productList=res.data[index]
+					
+				// 	})
+				// })
 			},
 			goPath(){
 				console.log("ok")
@@ -57,7 +80,16 @@
 </script>
 
 <style scoped>
-	.product-list{
+	/* 轮播图 */
+	.swiper{
+		margin: 15px 15px;
+		height: 155px;
+	}
+	.swiper image{
+		width: 100%;
+		
+	}
+	.product-table{
 		margin: 0 15px;
 	}
 	.product{
